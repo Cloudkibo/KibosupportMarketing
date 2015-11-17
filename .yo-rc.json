@@ -15,7 +15,7 @@
     "modelsNeedle": "// Insert models below",
     "filters": {
       "js": true,
-      "html": true,
+      "jade": true,
       "css": true,
       "ngroute": true,
       "bootstrap": true,
@@ -42,7 +42,7 @@
     ],
     "extensions": [
       "js",
-      "html",
+      "jade",
       "css"
     ],
     "directiveSimpleTemplates": "",

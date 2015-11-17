@@ -1,4 +1,4 @@
-// Generated on 2015-11-02 using generator-angular-fullstack 3.0.0-rc8
+// Generated on 2015-11-17 using generator-angular-fullstack 3.0.0-rc8
 'use strict';
 
 module.exports = function (grunt) {
@@ -74,6 +74,10 @@ module.exports = function (grunt) {
       jsTest: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{spec,mock}.js'],
         tasks: ['newer:jshint:all', 'wiredep:test', 'karma']
+      },
+      jade: {
+        files: ['<%= yeoman.client %>/{app,components}/**/*.jade'],
+        tasks: ['jade']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -294,7 +298,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'cloudKiboMarketingApp',
+        module: 'kiboMktApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -388,8 +392,10 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'jade',
       ],
       test: [
+        'jade',
       ],
       debug: {
         tasks: [
@@ -401,6 +407,7 @@ module.exports = function (grunt) {
         }
       },
       dist: [
+        'jade',
         'imagemin'
       ]
     },
@@ -485,6 +492,24 @@ module.exports = function (grunt) {
         NODE_ENV: 'production'
       },
       all: localConfig
+    },
+
+    // Compiles Jade to html
+    jade: {
+      compile: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.client %>',
+          src: ['{app,components}/**/*.jade'],
+          dest: '.tmp',
+          ext: '.html'
+        }]
+      }
     },
 
     // Compiles ES6 to JavaScript using Babel

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {

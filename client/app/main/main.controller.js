@@ -11,7 +11,7 @@ function MainController($scope, $http) {
 
 }
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .controller('MainController', MainController);
 
 })();

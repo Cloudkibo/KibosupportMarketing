@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .directive('footer', function () {
     return {
       templateUrl: 'components/footer/footer.html',

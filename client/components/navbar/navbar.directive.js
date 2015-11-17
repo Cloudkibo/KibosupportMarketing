@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .directive('navbar', function () {
     return {
       templateUrl: 'components/navbar/navbar.html',

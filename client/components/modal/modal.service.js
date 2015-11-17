@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

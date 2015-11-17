@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cloudKiboMarketingApp')
+angular.module('kiboMktApp')
   .controller('AboutusCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

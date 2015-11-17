@@ -3,7 +3,7 @@
 describe('Controller: FeaturesCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('cloudKiboMarketingApp'));
+  beforeEach(module('kiboMktApp'));
 
   var FeaturesCtrl, scope;
 
