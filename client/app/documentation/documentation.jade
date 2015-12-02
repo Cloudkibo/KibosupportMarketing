@@ -179,31 +179,107 @@ navbar
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse')
-                            | 1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
+                            | 1. Overview
                       #accordion2_1.panel-collapse.collapse.in
                         .panel-body
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | kibosupport is developed with strategy to separate server from client. Server side code is separated from Client side code.And to build kibosupport application, use Grunt (http://gruntjs.com/) commands. The built application is stored in dist folder. Then this folder is deployed to server for production.
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | kibosupport uses Nodejs (https://nodejs.org/) as its server and Angularjs (https://angularjs.org/) as its Client. All server side libraries are istalled using npm install command, these libraries are saved in node_modules folder. On server side, libraries are defined in package.json.
+                          p
+                            | Client side libraries can be installed using [bower install] command and are defined in bower.json.
+                          p
+                            | Our database is managed by moongoDB. Define database in mongodb to write the respective database connection strings in files in server/config/environment
+
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse')
-                            | 2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
+                            | 2. Architecture and Design
                       #accordion2_2.panel-collapse.collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | kibosupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our database is running in same droplet as of our application. For sending emails, we have integrated application with sendgrid service. Turn server is running on IP address
+                            b 45.55.232.65
+                            |  and this droplet is named as “kibosupporttest”
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse')
-                            | 3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ?
+                            | 3. Implementation
                       #accordion2_3.panel-collapse.collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          h4 Install nodejs
+                          p
+                            | In order to get this version, we just have to use the apt package manager. We should refresh our local package index prior and then install from the repositories:
+                          code sudo apt-get update
+                          code sudo apt-get install nodejs
+                          p install npm, which is the Node.js package manager
+                          code sudo apt-get install npm
+                          p
+                            | source: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
+                          h4 Install MongoDB
+                          p First have to import they key for the official MongoDB repository
+                          code $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+                          p After successfully importing the key you will see:
+                          code Output
+                          code gpg: Total number processed: 1
+                          code gpg:              imported: 1  (RSA: 1)
+                          p
+                            | Issue the following command to create a list file for MongoDB echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+                          p After adding the repository details, we need to update the packages list
+                          code sudo apt-get update
+                          p Now we can install the MongoDB package itself.
+                          code sudo apt-get install -y mongodb-org
+                          p
+                            | After package installation MongoDB will be automatically started. You can check this by running the following command.
+                          code service mongod status
+                          p
+                            | If MongoDB is running, you'll see an output like this (with a different process ID).
+                          p Output
+                          code mongod start/running, process 1611
+                          p
+                            | You can also stop, start, and restart MongoDB using the service command (e.g. service mongod stop, server mongod start).
+                          p
+                            | source: https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04
+                          h4 Install Forever
+                          p To install forever run the following command:
+                          code npm install forever -g
+                          h4 Install Grunt
+                          p To install grunt run the following command:
+                          code npm install -g grunt-cli
+                          h4 Install Bower
+                          p To install bower run the following command:
+                          code npm install -g bower
+                          h4 Clone the application on server from github:
+                          code git clone https://github.com/Cloudkibo/KiboSupport.git
+                          p Install server side libraries using:
+                          code npm install
+                          p Now, install client side libraries using:
+                          code bower install
+                          p
+                            | Now, build the application using grunt command (make sure in app.js file, mode is set to production)
+                          code grunt
+                          p In order to run the application, use forever:
+                          code forever start dist/server/app.js
+                          h4 Redirect the ports to our application ports
+                          p Run following two commands
+                          code
+                            | iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+                          code
+                            | iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8443
+                          h4 Updates
+                          p
+                            | If there is update in code, then we need to pull the code. Go to folder of KiboSupport using "cd KiboSupport". Run following commands
+                          code git pull origin master
+                          p Now build the application again using command:
+                          code grunt
+                          p Stop the server using command:
+                          code forever stop dist/server/app.js
+                          p Start the server again using command:
+                          code forever start dist/server/app.js
+                          p SSL certificates are stored in server/security and can be defined in app.js file
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
