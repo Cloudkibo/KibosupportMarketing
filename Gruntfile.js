@@ -634,12 +634,12 @@ module.exports = function (grunt) {
     'ngtemplates',
     'concat',
     'ngAnnotate',
-    'copy:dist',
-    'cdnify',
-    'cssmin',
-    'uglify',
-    'rev',
-    'usemin'
+    //'copy:dist'
+    //'cdnify',
+    //'cssmin',
+    //'uglify',
+    //'rev',
+    //'usemin'
   ]);
 
   grunt.registerTask('default', [
