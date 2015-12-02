@@ -1,7 +1,5 @@
 {
   "generator-angular-fullstack": {
-    "generatorVersion": "3.0.0-rc8",
-    "endpointDirectory": "server/api/",
     "insertRoutes": true,
     "registerRoutesFile": "server/routes.js",
     "routesNeedle": "// Insert routes below",
@@ -10,9 +8,6 @@
     "insertSockets": true,
     "registerSocketsFile": "server/config/socketio.js",
     "socketsNeedle": "// Insert sockets below",
-    "insertModels": true,
-    "registerModelsFile": "server/sqldb/index.js",
-    "modelsNeedle": "// Insert models below",
     "filters": {
       "js": true,
       "jade": true,
@@ -20,12 +15,9 @@
       "ngroute": true,
       "bootstrap": true,
       "uibootstrap": true,
-      "noModels": true,
-      "grunt": true,
-      "jasmine": true,
-      "mocha": false,
-      "should": false,
-      "expect": false
+      "socketio": true,
+      "mongoose": true,
+      "auth": true
     }
   },
   "generator-ng-component": {
@@ -36,8 +28,6 @@
     "basePath": "client",
     "moduleName": "",
     "filters": [
-      "ngroute",
-      "jasmine",
       "ngroute"
     ],
     "extensions": [
