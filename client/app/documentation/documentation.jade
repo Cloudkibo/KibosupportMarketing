@@ -314,65 +314,146 @@ navbar
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse')
-                            | 1. Developer Guide
+                            | 1. Overview
                       #accordion3_1.panel-collapse.collapse.in
                         .panel-body
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            | KiboSupport uses nodejs on server side and angularjs on client side. Instead of html, KiboSupport use jade templates which are then converted to html when served to client. Great care has been taken to separate the server side code from client side. To maintain great modularity, code has been separated into files according to role. KiboSupport has configuration files on both server side and client side. KiboSupport database, Mongodb, tables are defined in the code on server side with all the constraints defined with them.
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            | Code has been made very modular and several components are separated in their own folders with logic and test code placed side by side for each component. In KiboSupport separate folders for angularjs controllers, directives, filters and services injectable partial views are used in angularjs, which can be reused in the UI. KiboSupport client side route has its own folder where its controller, test code and router code is written, view is also defined there.
                           p
-                            | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | Setting up your development environment for Kibosupport, Developers Guide will help you.
+                          ul
+                            li   Overview
+                            li   Architecture
+                            li   Design
+                            li   Rest APIs
+                            li   Server side code
+                            li   Client side code
+                            li   Integration
+                            li   Libraries
+                            ul
+                              li   Client-side libraries
+                              li   Server-side libraries
+                            li   Database
+
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse')
-                            | 2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
+                            | 2. Architecture
                       #accordion3_2.panel-collapse.collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | KiboSupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our mongodb database is running in same droplet as of our application. For sending emails, we have integrated our application with sendgrid service.
+                          p
+                            | This application is loosely linked with CloudKibo to do conference call between visitor and agent. When agent picks the visitor call, the cloudkibo conference url is generated for both of them. They are redirected to that url for conference.
+                          p
+                            | Currently, our deployments are manual. We push the code to github and then access our droplet by ssh and pull the latest code there. With docker, we would just make a code push and docker will make build image for us.
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse')
-                            | 3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ?
+                            | 3. Server side code
                       #accordion3_3.panel-collapse.collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | Most of the main server side code is written in api folder. The purpose of REST API folder is defined in above section Later, we define authentication strategies in auth folder. We do local, facebook, google and windows based authentications. In configuration, we define several configurations for development environment, production environment and test environment. All the database connections strings are defined here. In socketio.js, we have all the server side code of socket.io. This code is often visited. App.js is the main file of server side application and serves as starting point of our code. ViewRoutes has controllers for all the views requested by client. Routes has all the API route handlers and other 404 route handlers
+                          h4 KiboSupport Server Side Files and Folders Structure
+                          p
+                            | KiboSupport server side files and folders are categorized for clarification and understanding. Each link makes a URI and the complete URI can be seen as:
+                          code api.kibosupport.com/[folder-name]/[link-of-File]
+                          p For example we have folder API and the link
+                          code //agentinitiatecalls/myschedullecalls
+                          p ,the complete URI will be
+                          code api.kibosupport.com//api/agentinitiatecalls/myschedullecalls/
+                          p
+                            | Following shows the complete server side folder and file. And each file has a description of the code it contains.
+                          h4 API (Folder)
+                          h5 Agentinitiatedcalls
+                          code agentinitiatedcalls/agentiniitedcalls.controller.js
+                          p File Description: Route Handlers for agent initiated calls List
+                          p File Category: Route Handlers
+                          code agentinitiatedcalls/agentiniitedcalls.model.js
+                          p File Description: Code for MongoDB Collection for agent initiated calls List
+                          p File Category: MongoDB model
+                          p Complete KiboSupport Server side structure can be found here:
+                          code https://github.com/Cloudkibo/KiboSupport/wiki/KiboSupport-Server-Side-code
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse')
-                            | 4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ?
+                            | 4. Client side code
                       #accordion3_4.panel-collapse.collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | On client side, we are using angularjs so most of the client application follows the angularjs patter of modularity. We have dependencies which are injected into each other when required. We have defined controllers, services, directives and filters.
+                          p
+                            | KiboSupport is single-page-application therefore we often request views from the server according to route. Client side routes are handled separately by angularjs and server side routes are not exposed to normal user. All the authentication and password management logic can be found in /app/account folder. Super user code on client side is defined in the /app/admin folder Most of the services are defined in the services folder. We have defined controllers which are not independent of views in controllers folder. We also have separate folders for filters and directives.
+                          p
+                            | Bower_components folder is automatically created and managed by bower. We don’t need to do anything with this folder.
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse')
-                            | 5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ?
+                            | 5. Integration
                       #accordion3_5.panel-collapse.collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p
+                            | It only require us to run npm install and bower install commands and this install all libraries. All the server side libraries are defined in package.json file. All the client side libraries are defined in bower.json. Sendgrid api is accessed using nodejs library and it has username and password which can be changed from super user account. Super user has all right to change the configuration.
+                          p
+                            | Application is integrated with shippable which automatically runs all the tests on each github commit and sends the email on test failure. Shippable uses the grunt file to run the tests. All the automated processes run by shippable are defined in grunt file.
+                          p
+                            | To see how they have been integrated follow the link: (Link)
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse')
-                            | 6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ?
+                            | 6. Libraries
                       #accordion3_6.panel-collapse.collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p Server side libraries:
+                            ul
+                              li socket.io
+                              li passport
+                              li sendgrid
+                            p Client side libraries:
+                            ul
+                              li angular bootstrap
+                              li angular socket io client
+                              li ocLazyLoad
+                              li angular web notification
+                              li angular google chart
+                              li angular high chart
+                              li angular css
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse')
-                            | 7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ?
+                            | 7. Database
                       #accordion3_7.panel-collapse.collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p
+                            | Kibosupport uses mongoose library of nodejs to connect to our mongodb database. In operations guide, we have described how to setup mongodb database for KiboSupport. Here we would look how tables (collectionds) are defined in code. In mongodb, we don't defined ER diagrams for tables. In code, we defined structure of tables and they are automatically created when first time used.
+                          p
+                            | All of our tables on server side are in API folder. For each entity we have a table, e.g. we have "users" table. Now, any file whicn ends in '.model.js' is the file which describes the structure and constraints of any table. You would find these files in api folder on server side code.
+                          p Here is the sample of a table defined in userchats.model.js file.
+                          code
+                            p var userchat = new Schema({
+                            p      to : String,
+                            p      from : String,
+                            p      fromFullName : String,
+                            p      msg : String,
+                            p      date : {type: Date, default: Date.now },
+                            p      owneruser : String
+                            | });
+                            p module.exports = mongoose.model('userchat', userchat);
+                          p All the tables will be defined in same way in their respective files.
+
                 // END TAB 3
       // END CONTENT
 footer
