@@ -453,6 +453,134 @@ navbar
                             | });
                             p module.exports = mongoose.model('userchat', userchat);
                           p All the tables will be defined in same way in their respective files.
+                #tab_4.tab-pane
+                  #accordion4.panel-group
+                    .panel.panel-danger
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse')
+                            | 1. Overview
+                      #accordion4_1.panel-collapse.collapse.in
+                        .panel-body
+                          p
+                            | It only require us to run npm install and bower install commands, this install all libraries. Sendgrid api is accessed using nodejs library and KiboSupport has username and password for sendgrid which can be changed from super user account.
+                          p Owner has all right to change the configuration.
+                          p
+                            | Application is integrated with shippable which automatically runs all the tests on each github commit and sends the email on test failure. Shippable uses the grunt file to run the tests and all the automated processes run by shippable are defined in grunt file.
+                    .panel.panel-success
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse')
+                            | 2. Implementing and Integrating TURN server
+                      #accordion4_2.panel-collapse.collapse
+                        .panel-body
+                          p We would install the rfc5766-turn-server, an open-source project, on Ubuntu
+                          h5 Step 1: Install the dependencies
+                          p
+                            code sudo apt-get install libssl-dev
+                          p
+                            code sudo apt-get install libevent-dev
+                          h5 Step 2: Download the tar file and untar it
+                          code
+                            | wget http://turnserver.open-sys.org/downloads/v3.2.5.9/turnserver-3.2.5.9-debian-wheezy-ubuntu-mint-x86-64bits.tar.gz
+                          p
+                            | You can download the latest version by going to the downloads section in this link:
+                            code https://code.google.com/p/rfc5766-turn-server
+                          code tar xfz turnserver-3.2.5.9-debian-wheezy-ubuntu-mint-x86-64bits.tar.gz
+                          p
+                            | You would get
+                            code *.deb
+                            | file and INSTALL file.
+                          h5 Step 3: Installation
+                          code sudo apt-get update
+                          code sudo apt-get install gdebi-core
+                          p
+                            | If you get unmet dependency error on above command then run the following command before running this command.
+                          code sudo apt-get -f install
+                          p
+                            | Next, we would use gdebi with
+                            code  *.deb file.
+                          code sudo gdebi rfc5766*.deb
+                          p
+                            | It will install the TURN on your file system. It would put documentations, binaries and configuration files in different directories. You would like to read some documentation in /usr/share/doc/rfc5766-turn-server directory. Also check following manuals.
+                          code
+                            p man turnserver
+                            p man turnadmin
+                            p man turnutils
+                          h5 Step 4: Configuration
+                          p
+                            | Edit this file /etc/turnserver.conf. Leave everything as it is and write the following statement in it. listening-ip= We would use the long term credentials. For this, you need to edit this file /etc/turnuserdb.conf.
+                          p Insert the following statement in this file.
+                          code username:password
+                          p
+                            | Now, in order to run turn server as a daemon, edit this file /etc/default/rfc5766-turn-server and make sure following is set to 1.
+                          code TURNSERVER_ENABLED=1
+                          h5 Step 5: Start the server
+                          p Go to this directory /usr/bin and run the following command to start the server.
+                          code turnserver -o -a -r -f
+                          p Now, open it up.
+
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse')
+                            | 3. Sendgrid Integration
+                      #accordion4_3.panel-collapse.collapse
+                        .panel-body
+                          p
+                            | Sendgrid is an email service provider api which CloudKibo uses to send automatic emails to users. In package.json file, we have defined which version of sendgrid api we integrate with our server. Simple npm install command would work and install this module along with all other required modules. The username and password is given to us by Sendgrid which is provided when we use this API. We have stored the username and password in database so that super user can easily modify them according to need:
+
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse')
+                            | 4. Integration with Facebook, Google and Windows
+                      #accordion4_4.panel-collapse.collapse
+                        .panel-body
+                          p
+                            | CloudKibo is integrated with Facebook, Google and Windows for authentication purposes. All the secrets and keys are defined in database so that they can be easily changed by super user.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse')
+                            | 5. Mongodb Integration
+                      #accordion4_5.panel-collapse.collapse
+                        .panel-body
+                          p
+                            | Assuming that mongodb has been installed using steps provided in above section, we would need to create database now. Use the following command in mongo console to create database named cloudkibo:
+                          p
+                            code use cloudkibo
+                          p
+                            | Use the following steps to create username and password for that database and run mongo server in authentication mode:
+                          code (http://docs.mongodb.org/manual/tutorial/enable-authentication-without-bypass/)
+                          h5 Procedure
+                          strong Start the MongoDB instance without authentication.
+                          p
+                            | Start the mongod or mongos instance without the authorization or keyFile setting. For example:
+                          code mongod --port 27017 --dbpath /data/db1
+                          p
+                            | For details on starting a mongod or mongos, see Manage mongod Processes or Deploy a Sharded Cluster.
+                          strong Create the system user administrator.
+                          p
+                            | Add the user with the userAdminAnyDatabase role, and only that role. The following example creates the user siteUserAdmin user on the cloudkibo database:
+                          code
+                            p use cloudkibo
+                            p db.createUser(
+                            p   {
+                            p user: "siteUserAdmin",
+                            p pwd: "password",
+                            p roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+                            p }
+                            p )
+                          h5 Re-start the MongoDB instance with authentication enabled.
+                          p
+                            | Re-start the mongod or mongos instance with the authorization or keyFile setting. Use authorization on a standalone instance. Use keyFile on an instance in a replica set or sharded cluster. The following example enables authentication on a standalone mongod using the authorization command-line option:
+                          code mongod --auth --config /etc/mongodb/mongodb.conf
+                          h5 Create additional users.
+                          p
+                            | Log in with the user administrator’s credentials and create additional users. See Manage User and Roles.
+
+
 
                 // END TAB 3
       // END CONTENT
