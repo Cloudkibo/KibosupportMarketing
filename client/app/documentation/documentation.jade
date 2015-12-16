@@ -16,17 +16,17 @@ navbar
             .col-md-3.col-sm-3
               ul.tabbable.faq-tabbable
                 li
-                  a(href='#tab_1', data-toggle='tab', aria-expanded='false') User Manual
+                  a(href='#tab_1', data-toggle='tab', aria-expanded='true') User Manual
                 li
-                  a(href='#tab_2', data-toggle='tab') Operation Guide
+                  a(href='#tab_2', data-toggle='tab', aria-expanded='true') Operation Guide
                 li
-                  a(href='#tab_3', data-toggle='tab', aria-expanded='false') Developer Guide
+                  a(href='#tab_3', data-toggle='tab', aria-expanded='true') Developer Guide
                 li.active
                   a(href='#tab_4', data-toggle='tab', aria-expanded='true') Integration
                 li
-                  a(href='#tab_2', data-toggle='tab') Payment Rules
+                  a(href='#tab_2', data-toggle='tab', aria-expanded='true') Payment Rules
                 li
-                  a(href='#tab_3', data-toggle='tab') Other Questions
+                  a(href='#tab_3', data-toggle='tab', aria-expanded='true') Other Questions
             .col-md-9.col-sm-9
               .tab-content(style='padding:0; background: #fff;')
                 // START TAB 1
@@ -35,7 +35,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_1', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
+                          a.accordion-toggle(href='#accordion1_1', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | User Guide
                       #accordion1_1.panel-collapse.collapse(aria-expanded='false', style='height: 0px;')
                         .panel-body
@@ -52,25 +52,25 @@ navbar
                       #accordion1_2.panel-collapse.collapse.in(aria-expanded='true')
                         .panel-body
                           h3 Audio/Video call
-                            p
-                              | Live call with your customer helps to have live conversation with your customer and understand their problems and solve them. Customer can just fill a form and join agent in the call.
-                            h3 Live chat
-                            p
-                              | Instant chat feature allows your visitors to initiate a chat and communicate with your agents.
-                            h3 Screen sharing
-                            p
-                              | Screen sharing feature helps you to direct your visitor directly to the answer they've been looking for, instead of trying to explain where to find the answer.
-                            h3 Reports
-                            p
-                              | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
-                            h3 Widget on website
-                            p
-                              | Each company has its own unique identity. Easy way to embed widget code and connect with you customer
+                          p
+                            | Live call with your customer helps to have live conversation with your customer and understand their problems and solve them. Customer can just fill a form and join agent in the call.
+                          h3 Live chat
+                          p
+                            | Instant chat feature allows your visitors to initiate a chat and communicate with your agents.
+                          h3 Screen sharing
+                          p
+                            | Screen sharing feature helps you to direct your visitor directly to the answer they've been looking for, instead of trying to explain where to find the answer.
+                          h3 Reports
+                          p
+                            | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
+                          h3 Widget on website
+                          p
+                            | Each company has its own unique identity. Easy way to embed widget code and connect with you customer
 
-                    .panel.panel-success
+                    .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_3', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
+                          a.accordion-toggle(href='#accordion1_3', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Application Use
                       #accordion1_3.panel-collapse.collapse(aria-expanded='false')
                         .panel-body
@@ -90,10 +90,10 @@ navbar
                           h4 Reset password
                           p
                             | You can always reset your password by provding your registered Kibosupport email id. A rest email with password Reset Link will been sent to your email address. Check your spam or junk folder if you have not received the email.
-                    .panel.panel-warning
+                    .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_4', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
+                          a.accordion-toggle(href='#accordion1_4', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Groups
                       #accordion1_4.panel-collapse.collapse(aria-expanded='false')
                         .panel-body
@@ -105,10 +105,10 @@ navbar
                               li Admin
                               li Supervisor
                           | Customer can just fill a form and join agent in the call.
-                    .panel.panel-danger
+                    .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_5', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
+                          a.accordion-toggle(href='#accordion1_5', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Dashboard
                       #accordion1_5.panel-collapse.collapse(aria-expanded='false')
                         .panel-body
@@ -145,7 +145,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_6', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
+                          a.accordion-toggle(href='#accordion1_6', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Widget
                       #accordion1_6.panel-collapse.collapse(aria-expanded='false')
                         .panel-body
@@ -166,14 +166,7 @@ navbar
                           p
                             | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
 
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_7', data-parent='#accordion1', data-toggle='collapse', aria-expanded='false')
-                            | 7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ?
-                      #accordion1_7.panel-collapse.collapse(aria-expanded='false')
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+
                 // END TAB 1
                 // START TAB 2
                 #tab_2.tab-pane
@@ -181,7 +174,7 @@ navbar
                     .panel.panel-warning
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Overiew
                       #accordion2_1.panel-collapse.collapse.in
                         .panel-body
@@ -197,7 +190,7 @@ navbar
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Architecture and Design
                       #accordion2_2.panel-collapse.collapse
                         .panel-body
@@ -208,7 +201,7 @@ navbar
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Impelimentation
                       #accordion2_3.panel-collapse.collapse
                         .panel-body
@@ -286,7 +279,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_4', data-parent='#accordion2', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion2_4', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Administration
                       #accordion2_4.panel-collapse.collapse
                         .panel-body
@@ -316,7 +309,7 @@ navbar
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Overview
                       #accordion3_1.panel-collapse.collapse.in
                         .panel-body
@@ -343,7 +336,7 @@ navbar
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Architecture
                       #accordion3_2.panel-collapse.collapse
                         .panel-body
@@ -357,7 +350,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Server side code
                       #accordion3_3.panel-collapse.collapse
                         .panel-body
@@ -387,7 +380,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Client side code
                       #accordion3_4.panel-collapse.collapse
                         .panel-body
@@ -401,7 +394,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Integration
                       #accordion3_5.panel-collapse.collapse
                         .panel-body
@@ -415,7 +408,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Libraries
                       #accordion3_6.panel-collapse.collapse
                         .panel-body
@@ -436,7 +429,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Database
                       #accordion3_7.panel-collapse.collapse
                         .panel-body
@@ -463,7 +456,7 @@ navbar
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Overview
                       #accordion4_1.panel-collapse.collapse.in
                         .panel-body
@@ -475,7 +468,7 @@ navbar
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Implementing and Integrating TURN server
                       #accordion4_2.panel-collapse.collapse
                         .panel-body
@@ -528,7 +521,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Sendgrid Integration
                       #accordion4_3.panel-collapse.collapse
                         .panel-body
@@ -538,7 +531,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Integration with Facebook, Google and Windows
                       #accordion4_4.panel-collapse.collapse
                         .panel-body
@@ -547,7 +540,7 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse')
+                          a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Mongodb Integration
                       #accordion4_5.panel-collapse.collapse
                         .panel-body
