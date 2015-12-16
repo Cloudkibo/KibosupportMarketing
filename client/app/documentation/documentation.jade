@@ -37,7 +37,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_1', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | User Guide
-                      #accordion1_1.panel-collapse.collapse(aria-expanded='true', style='height: 0px;')
+                      #accordion1_1.panel-collapse(aria-expanded='true', style='height: 0px;')
                         .panel-body
                           p
                             | If you want to run existing Cloudkibo application, User Guide expalins Cloudkibo features and use of interface. It explains how to use application to make calls, meeting with multiple users, chat with contact or with group during the call and file transfer to contact and during meeting call.
@@ -49,7 +49,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Features
-                      #accordion1_2.panel-collapse.collapse.in(aria-expanded='true')
+                      #accordion1_2.panel-collapse(aria-expanded='true')
                         .panel-body
                           h3 Audio/Video call
                           p
@@ -72,7 +72,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_3', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Application Use
-                      #accordion1_3.panel-collapse.collapse(aria-expanded='true')
+                      #accordion1_3.panel-collapse(aria-expanded='true')
                         .panel-body
                           |  This document ill inform you about how can you use the functionality provided by Kibosupport
                           h4 Sign up
@@ -95,7 +95,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_4', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Groups
-                      #accordion1_4.panel-collapse.collapse(aria-expanded='true')
+                      #accordion1_4.panel-collapse(aria-expanded='true')
                         .panel-body
                           | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
                           h3  Agent
@@ -110,7 +110,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_5', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Dashboard
-                      #accordion1_5.panel-collapse.collapse(aria-expanded='true')
+                      #accordion1_5.panel-collapse(aria-expanded='true')
                         .panel-body
                           p
                             | When you login with you kibosupport account the first thing visible is dashboard is berif summary of visitors call statistics with the average wait time and average call duration of visitor calls.
@@ -147,7 +147,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion1_6', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
                             | Widget
-                      #accordion1_6.panel-collapse.collapse(aria-expanded='true')
+                      #accordion1_6.panel-collapse(aria-expanded='true')
                         .panel-body
                           | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
                           h4 Widget UI for visitor
@@ -169,14 +169,14 @@ navbar
 
                 // END TAB 1
                 // START TAB 2
-                #tab_2.tab-pane.active
+                #tab_2.tab-pane
                   #accordion2.panel-group
                     .panel.panel-warning
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Overiew
-                      #accordion2_1.panel-collapse.collapse.in
+                      #accordion2_1.panel-collapse
                         .panel-body
                           p
                             | kibosupport is developed with strategy to separate server from client. Server side code is separated from Client side code.And to build kibosupport application, use Grunt (http://gruntjs.com/) commands. The built application is stored in dist folder. Then this folder is deployed to server for production.
@@ -192,7 +192,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Architecture and Design
-                      #accordion2_2.panel-collapse.collapse
+                      #accordion2_2.panel-collapse
                         .panel-body
                           p
                             | kibosupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our database is running in same droplet as of our application. For sending emails, we have integrated application with sendgrid service. Turn server is running on IP address
@@ -203,7 +203,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Impelimentation
-                      #accordion2_3.panel-collapse.collapse
+                      #accordion2_3.panel-collapse
                         .panel-body
                           h4 Install nodejs
                             p
@@ -281,7 +281,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_4', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
                             | Administration
-                      #accordion2_4.panel-collapse.collapse
+                      #accordion2_4.panel-collapse
                         .panel-body
                           p
                             | KiboSupport Owner account is for KiboSupport owner. This is administrator account and administrator sets application configurtion for sepecific KiboSupport features. Owner can modify certain KiboSupport features and can remove user accounts. It can see accounts created and can view happenings in KiboSupport application. There is no way to make owner account from user interface, this is secure. One needs to create manual user account at KiboSupport first, then we can change the role from database manually for that user to be owner. This is for security reasons.
@@ -304,14 +304,14 @@ navbar
                             li KiboSupport Logo
                 // END TAB 2
                 // START TAB 3
-                #tab_3.tab-pane.active
+                #tab_3.tab-pane
                   #accordion3.panel-group
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Overview
-                      #accordion3_1.panel-collapse.collapse.in
+                      #accordion3_1.panel-collapse.
                         .panel-body
                           p
                             | KiboSupport uses nodejs on server side and angularjs on client side. Instead of html, KiboSupport use jade templates which are then converted to html when served to client. Great care has been taken to separate the server side code from client side. To maintain great modularity, code has been separated into files according to role. KiboSupport has configuration files on both server side and client side. KiboSupport database, Mongodb, tables are defined in the code on server side with all the constraints defined with them.
@@ -338,7 +338,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Architecture
-                      #accordion3_2.panel-collapse.collapse
+                      #accordion3_2.panel-collapse
                         .panel-body
                           p
                             | KiboSupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our mongodb database is running in same droplet as of our application. For sending emails, we have integrated our application with sendgrid service.
@@ -352,7 +352,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
                             | Server side code
-                      #accordion3_3.panel-collapse.collapse
+                      #accordion3_3.panel-collapse
                         .panel-body
                           p
                             | Most of the main server side code is written in api folder. The purpose of REST API folder is defined in above section Later, we define authentication strategies in auth folder. We do local, facebook, google and windows based authentications. In configuration, we define several configurations for development environment, production environment and test environment. All the database connections strings are defined here. In socketio.js, we have all the server side code of socket.io. This code is often visited. App.js is the main file of server side application and serves as starting point of our code. ViewRoutes has controllers for all the views requested by client. Routes has all the API route handlers and other 404 route handlers
@@ -382,7 +382,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Client side code
-                      #accordion3_4.panel-collapse.collapse
+                      #accordion3_4.panel-collapse
                         .panel-body
                           p
                             | On client side, we are using angularjs so most of the client application follows the angularjs patter of modularity. We have dependencies which are injected into each other when required. We have defined controllers, services, directives and filters.
@@ -396,7 +396,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Integration
-                      #accordion3_5.panel-collapse.collapse
+                      #accordion3_5.panel-collapse
                         .panel-body
                           p
                             | It only require us to run npm install and bower install commands and this install all libraries. All the server side libraries are defined in package.json file. All the client side libraries are defined in bower.json. Sendgrid api is accessed using nodejs library and it has username and password which can be changed from super user account. Super user has all right to change the configuration.
@@ -410,7 +410,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Libraries
-                      #accordion3_6.panel-collapse.collapse
+                      #accordion3_6.panel-collapse
                         .panel-body
                           p Server side libraries:
                             ul
@@ -431,7 +431,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
                             | Database
-                      #accordion3_7.panel-collapse.collapse
+                      #accordion3_7.panel-collapse
                         .panel-body
                           p
                             | Kibosupport uses mongoose library of nodejs to connect to our mongodb database. In operations guide, we have described how to setup mongodb database for KiboSupport. Here we would look how tables (collectionds) are defined in code. In mongodb, we don't defined ER diagrams for tables. In code, we defined structure of tables and they are automatically created when first time used.
@@ -451,14 +451,14 @@ navbar
                           p All the tables will be defined in same way in their respective files.
                 // END TAB 3
                 // START TAB 4
-                #tab_4.tab-pane.active
+                #tab_4.tab-pane
                   #accordion4.panel-group
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Overview
-                      #accordion4_1.panel-collapse.collapse.in
+                      #accordion4_1.panel-collapse
                         .panel-body
                           p
                             | It only require us to run npm install and bower install commands, this install all libraries. Sendgrid api is accessed using nodejs library and KiboSupport has username and password for sendgrid which can be changed from super user account.
@@ -470,7 +470,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Implementing and Integrating TURN server
-                      #accordion4_2.panel-collapse.collapse
+                      #accordion4_2.panel-collapse
                         .panel-body
                           p We would install the rfc5766-turn-server, an open-source project, on Ubuntu
                             h5 Step 1: Install the dependencies
@@ -523,7 +523,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Sendgrid Integration
-                      #accordion4_3.panel-collapse.collapse
+                      #accordion4_3.panel-collapse
                         .panel-body
                           p
                             | Sendgrid is an email service provider api which CloudKibo uses to send automatic emails to users. In package.json file, we have defined which version of sendgrid api we integrate with our server. Simple npm install command would work and install this module along with all other required modules. The username and password is given to us by Sendgrid which is provided when we use this API. We have stored the username and password in database so that super user can easily modify them according to need:
@@ -533,7 +533,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Integration with Facebook, Google and Windows
-                      #accordion4_4.panel-collapse.collapse
+                      #accordion4_4.panel-collapse
                         .panel-body
                           p
                             | CloudKibo is integrated with Facebook, Google and Windows for authentication purposes. All the secrets and keys are defined in database so that they can be easily changed by super user.
@@ -542,7 +542,7 @@ navbar
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
                             | Mongodb Integration
-                      #accordion4_5.panel-collapse.collapse
+                      #accordion4_5.panel-collapse
                         .panel-body
                           p
                             | Assuming that mongodb has been installed using steps provided in above section, we would need to create database now. Use the following command in mongo console to create database named cloudkibo:
