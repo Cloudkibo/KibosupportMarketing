@@ -1,26 +1,8 @@
 'use strict';
 
 angular.module('kiboMktApp')
-  .controller('ThankYouCtrl', function ($scope, $http) {
+  .controller('ThankYouCtrl', function ($scope) {
     $scope.message = 'Hello';
 
-    $scope.giveFeedback = function (){
-      $scope.data.subject = 'KiboSupport: Feedback given on KiboSupport Marketing Website';
-      $http.post('https://api.cloudkibo.com/feedback', $scope.data)
-        .success(function(data){
-          $scope.addAlert('success', 'Thank you for your feedback.')
-        })
-    }
-
-    $scope.alerts = [];
-
-    $scope.addAlert = function(newtype, newMsg) {
-      //console.log('Error', newtype, newMsg)
-      $scope.alerts.push({type: newtype, msg: newMsg});
-    };
-
-    $scope.closeAlert = function(index) {
-      $scope.alerts.splice(index, 1);
-    };
 
   });
