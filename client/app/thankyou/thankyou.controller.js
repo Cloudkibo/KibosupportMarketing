@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('kiboMktApp')
-  .controller('ContactCtrl', function ($scope, $http) {
+  .controller('ThankYouCtrl', function ($scope, $http) {
     $scope.message = 'Hello';
 
     $scope.giveFeedback = function (){

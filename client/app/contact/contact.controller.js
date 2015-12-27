@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('kiboMktApp')
-  .controller('ContactCtrl', function ($scope, $http) {
+  .controller('ContactCtrl', function ($scope, $http, $location) {
     $scope.message = 'Hello';
 
     $scope.giveFeedback = function (){
@@ -9,6 +9,7 @@ angular.module('kiboMktApp')
       $http.post('https://api.cloudkibo.com/feedback', $scope.data)
         .success(function(data){
           $scope.addAlert('success', 'Thank you for your feedback.')
+          $location.path('/thankyou');
         })
     }
 
