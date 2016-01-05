@@ -6,21 +6,27 @@ navbar
         a(href='index.html') Home
       li
         a(href='javascript:;') Pages
-      li.active Frequently Asked Questions
+      li.Documentation
     .row.margin-bottom-40
       // BEGIN CONTENT
       .col-md-12.col-sm-12
-        h1 Frequently Asked Questions
+        h1 Documentation
         .content-page
           .row
             .col-md-3.col-sm-3
               ul.tabbable.faq-tabbable
                 li.active
-                  a(href='#tab_1', data-toggle='tab') General Questions
+                  a(href='#tab_1', data-toggle='tab', aria-expanded='true') User Manual
                 li
-                  a(href='#tab_2', data-toggle='tab') Membership
+                  a(href='#tab_2', data-toggle='tab', aria-expanded='true') Operation Guide
                 li
-                  a(href='#tab_3', data-toggle='tab') Terms Of Service
+                  a(href='#tab_3', data-toggle='tab', aria-expanded='true') Developer Guide
+                li
+                  a(href='#tab_4', data-toggle='tab', aria-expanded='true') Integration
+                li
+                  a(href='#tab_2', data-toggle='tab', aria-expanded='true') Payment Rules
+                li
+                  a(href='#tab_3', data-toggle='tab', aria-expanded='true') Other Questions
             .col-md-9.col-sm-9
               .tab-content(style='padding:0; background: #fff;')
                 // START TAB 1
@@ -29,61 +35,138 @@ navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion1_1', data-parent='#accordion1', data-toggle='collapse')
-                            | 1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion1_1.panel-collapse.collapse.in
+                          a.accordion-toggle(href='#accordion1_1', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | User Guide
+                      #accordion1_1.panel-collapse
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | If you want to run existing Cloudkibo application, User Guide expalins Cloudkibo features and use of interface. It explains how to use application to make calls, meeting with multiple users, chat with contact or with group during the call and file transfer to contact and during meeting call.
+                          ul
+                            li Features
+                            li Application use
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse')
-                            | 2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion1_2.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Features
+                      #accordion1_2.panel-collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    .panel.panel-success
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_3', data-parent='#accordion1', data-toggle='collapse')
-                            | 3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ?
-                      #accordion1_3.panel-collapse.collapse
-                        .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    .panel.panel-warning
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_4', data-parent='#accordion1', data-toggle='collapse')
-                            | 4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ?
-                      #accordion1_4.panel-collapse.collapse
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    .panel.panel-danger
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_5', data-parent='#accordion1', data-toggle='collapse')
-                            | 5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ?
-                      #accordion1_5.panel-collapse.collapse
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          h3 Audio/Video call
+                          p
+                            | Live call with your customer helps to have live conversation with your customer and understand their problems and solve them. Customer can just fill a form and join agent in the call.
+                          h3 Live chat
+                          p
+                            | Instant chat feature allows your visitors to initiate a chat and communicate with your agents.
+                          h3 Screen sharing
+                          p
+                            | Screen sharing feature helps you to direct your visitor directly to the answer they've been looking for, instead of trying to explain where to find the answer.
+                          h3 Reports
+                          p
+                            | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
+                          h3 Widget on website
+                          p
+                            | Each company has its own unique identity. Easy way to embed widget code and connect with you customer
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_6', data-parent='#accordion1', data-toggle='collapse')
-                            | 6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ?
-                      #accordion1_6.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion1_3', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Application Use
+                      #accordion1_3.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          |  This document ill inform you about how can you use the functionality provided by Kibosupport
+                          h4 Sign up
+                          p
+                            | You can signup your compnay with Kibosupport with your email id.
+                          h4 As company owner
+                          p
+                            | Company can sign up with company name and company domain name. The domain name will help admin of company to invite agent that have company domain email id.
+                          h4 As company agent
+                          p
+                            | Admin can invite an agent to join its company and provide service to customers. Agent will be given invite link via email, agent's email id is already caputred and set by company admin. Agen can login using company domain emaild id ONLY, as set by company admin.
+                          h4 Login
+                          p
+                            | Login with Kibosupport using registered email id and password.
+                          h4 Reset password
+                          p
+                            | You can always reset your password by provding your registered Kibosupport email id. A rest email with password Reset Link will been sent to your email address. Check your spam or junk folder if you have not received the email.
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle.collapsed(href='#accordion1_7', data-parent='#accordion1', data-toggle='collapse')
-                            | 7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ?
-                      #accordion1_7.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion1_4', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Groups
+                      #accordion1_4.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
+                          h3  Agent
+                          p
+                            | Agent list can be seen by admin and supervisor. Admin and supervisor can invite the agent using the email id. Invite link will be given to the agent via email, Kibosupport already has some information about the agent as given by admin or supervisor while sending invitation. When agent is invited it is shown as pending in the agent list until agent signs up. Pending requests for agent can aslo be deleted. Admin and supervisor can view agent and also Admin can change role of agent to
+                            ul
+                              li Admin
+                              li Supervisor
+                          | Customer can just fill a form and join agent in the call.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_5', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Dashboard
+                      #accordion1_5.panel-collapse
+                        .panel-body
+                          p
+                            | When you login with you kibosupport account the first thing visible is dashboard is berif summary of visitors call statistics with the average wait time and average call duration of visitor calls.
+                            | These waiting calls, inprogress calls, abandoned calls and complete calls are clickable. On click they show detailed view of each call and visitor. The details also shows which agent has picked the call. The side panel gives direct link to other Kibosupport features and call details.
+                          h3 Company Settings
+                          p
+                            | On login with Kibosupport account you need to set company settings. These settings include some configuration settings for agents , groups and calls.
+                          h3 Company Settings
+                          p You can set following settings:
+                            ul
+                              li Max number of groups
+                              p
+                                | This gives restriction for not creating more than set number of groups.
+                              li Company domain emails
+                              p
+                                | Company domain emails restricts that no agent or supervisor can join or be invited if they do not have company domain email.
+                              li Show summary
+                              p
+                                | This allows agent, admin and supervisor to record summaray of visitor and show its call summary captured previously.
+                              li Allow chat
+                              p
+                                | During the call you can allows chat feature to chat with visitor
+                              li Abandoned call reschedule Sample emails
+                              p
+                                | Company admin, supervisor and agent can set three sample emails to schedule any abandoned call.
+                              li Completed call reschedule Sample emails
+                              p
+                                | Company admin, supervisor and agent can set three sample emails to reschedule any completed call.
+                              li Invited call reschedule Sample emails
+                              p
+                                | Company admin, supervisor and agent can set three sample emails to invite customer for call.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_6', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Widget
+                      #accordion1_6.panel-collapse
+                        .panel-body
+                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
+                          h4 Widget UI for visitor
+                          p
+                            | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
+                          h4 Report
+                          p
+                            |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
+                          h4 Top Group calls
+                          p
+                            | This graph shows groups with respect to frequeny of calls made for.
+                          h4 Agents picked calls
+                          p
+                            | This graph represents the agent with respect to number of calls picked by them.
+                          h4 Averages
+                          p
+                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+
+
                 // END TAB 1
                 // START TAB 2
                 #tab_2.tab-pane
@@ -91,131 +174,412 @@ navbar
                     .panel.panel-warning
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse')
-                            | 1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion2_1.panel-collapse.collapse.in
+                          a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
+                            | Overiew
+                      #accordion2_1.panel-collapse
                         .panel-body
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | kibosupport is developed with strategy to separate server from client. Server side code is separated from Client side code.And to build kibosupport application, use Grunt (http://gruntjs.com/) commands. The built application is stored in dist folder. Then this folder is deployed to server for production.
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | kibosupport uses Nodejs (https://nodejs.org/) as its server and Angularjs (https://angularjs.org/) as its Client. All server side libraries are istalled using npm install command, these libraries are saved in node_modules folder. On server side, libraries are defined in package.json.
+                          p
+                            | Client side libraries can be installed using [bower install] command and are defined in bower.json.
+                          p
+                            | Our database is managed by moongoDB. Define database in mongodb to write the respective database connection strings in files in server/config/environment
+
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse')
-                            | 2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion2_2.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
+                            | Architecture and Design
+                      #accordion2_2.panel-collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | kibosupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our database is running in same droplet as of our application. For sending emails, we have integrated application with sendgrid service. Turn server is running on IP address
+                            b 45.55.232.65
+                            |  and this droplet is named as “kibosupporttest”
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse')
-                            | 3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ?
-                      #accordion2_3.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion2_3', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
+                            | Impelimentation
+                      #accordion2_3.panel-collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          h4 Install nodejs
+                            p
+                              | In order to get this version, we just have to use the apt package manager. We should refresh our local package index prior and then install from the repositories:
+                            code sudo apt-get update
+                            code sudo apt-get install nodejs
+                            p install npm, which is the Node.js package manager
+                            code sudo apt-get install npm
+                            p
+                              | source: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
+                            h4 Install MongoDB
+                            p First have to import they key for the official MongoDB repository
+                            code $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+                            p After successfully importing the key you will see:
+                            code Output
+                            code gpg: Total number processed: 1
+                            code gpg:              imported: 1  (RSA: 1)
+                            p
+                              | Issue the following command to create a list file for MongoDB echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+                            p After adding the repository details, we need to update the packages list
+                            code sudo apt-get update
+                            p Now we can install the MongoDB package itself.
+                            code sudo apt-get install -y mongodb-org
+                            p
+                              | After package installation MongoDB will be automatically started. You can check this by running the following command.
+                            code service mongod status
+                            p
+                              | If MongoDB is running, you'll see an output like this (with a different process ID).
+                            p Output
+                            code mongod start/running, process 1611
+                            p
+                              | You can also stop, start, and restart MongoDB using the service command (e.g. service mongod stop, server mongod start).
+                            p
+                              | source: https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04
+                            h4 Install Forever
+                            p To install forever run the following command:
+                            code npm install forever -g
+                            h4 Install Grunt
+                            p To install grunt run the following command:
+                            code npm install -g grunt-cli
+                            h4 Install Bower
+                            p To install bower run the following command:
+                            code npm install -g bower
+                            h4 Clone the application on server from github:
+                            code git clone https://github.com/Cloudkibo/KiboSupport.git
+                            p Install server side libraries using:
+                            code npm install
+                            p Now, install client side libraries using:
+                            code bower install
+                            p
+                              | Now, build the application using grunt command (make sure in app.js file, mode is set to production)
+                            code grunt
+                            p In order to run the application, use forever:
+                            code forever start dist/server/app.js
+                            h4 Redirect the ports to our application ports
+                            p Run following two commands
+                            code
+                              | iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+                            code
+                              | iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8443
+                            h4 Updates
+                            p
+                              | If there is update in code, then we need to pull the code. Go to folder of KiboSupport using "cd KiboSupport". Run following commands
+                            code git pull origin master
+                            p Now build the application again using command:
+                            code grunt
+                            p Stop the server using command:
+                            code forever stop dist/server/app.js
+                            p Start the server again using command:
+                            code forever start dist/server/app.js
+                            p SSL certificates are stored in server/security and can be defined in app.js file
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion2_4', data-parent='#accordion2', data-toggle='collapse')
-                            | 4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ?
-                      #accordion2_4.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion2_4', data-parent='#accordion2', data-toggle='collapse',aria-expanded='true')
+                            | Administration
+                      #accordion2_4.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle(href='#accordion2_5', data-parent='#accordion2', data-toggle='collapse')
-                            | 5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ?
-                      #accordion2_5.panel-collapse.collapse
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle(href='#accordion2_6', data-parent='#accordion2', data-toggle='collapse')
-                            | 6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ?
-                      #accordion2_6.panel-collapse.collapse
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a.accordion-toggle(href='#accordion2_7', data-parent='#accordion2', data-toggle='collapse')
-                            | 7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ?
-                      #accordion2_7.panel-collapse.collapse
-                        .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-                // END TAB 3
+                          p
+                            | KiboSupport Owner account is for KiboSupport owner. This is administrator account and administrator sets application configurtion for sepecific KiboSupport features. Owner can modify certain KiboSupport features and can remove user accounts. It can see accounts created and can view happenings in KiboSupport application. There is no way to make owner account from user interface, this is secure. One needs to create manual user account at KiboSupport first, then we can change the role from database manually for that user to be owner. This is for security reasons.
+                          p When owner login, a separate tab is shown to the admin "Admin Dashboard"
+                          p Admin can see details like
+                          ul
+                            li Username
+                            li First Name
+                            li Last Name
+                            li Email id
+                            li Phone number
+                            li Country
+                            li Role
+                            li Joining date
+                            li Option
+                          p Admin has option to remove the contact. Admin can set configuration like:
+                          ul
+                            li SendGrid Username
+                            li SendGrid Password
+                            li KiboSupport Logo
+                // END TAB 2
                 // START TAB 3
                 #tab_3.tab-pane
                   #accordion3.panel-group
                     .panel.panel-danger
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse')
-                            | 1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion3_1.panel-collapse.collapse.in
+                          a.accordion-toggle(href='#accordion3_1', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
+                            | Overview
+                      #accordion3_1.panel-collapse
                         .panel-body
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            | KiboSupport uses nodejs on server side and angularjs on client side. Instead of html, KiboSupport use jade templates which are then converted to html when served to client. Great care has been taken to separate the server side code from client side. To maintain great modularity, code has been separated into files according to role. KiboSupport has configuration files on both server side and client side. KiboSupport database, Mongodb, tables are defined in the code on server side with all the constraints defined with them.
                           p
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            | Code has been made very modular and several components are separated in their own folders with logic and test code placed side by side for each component. In KiboSupport separate folders for angularjs controllers, directives, filters and services injectable partial views are used in angularjs, which can be reused in the UI. KiboSupport client side route has its own folder where its controller, test code and router code is written, view is also defined there.
                           p
-                            | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            | Setting up your development environment for Kibosupport, Developers Guide will help you.
+                          ul
+                            li   Overview
+                            li   Architecture
+                            li   Design
+                            li   Rest APIs
+                            li   Server side code
+                            li   Client side code
+                            li   Integration
+                            li   Libraries
+                            ul
+                              li   Client-side libraries
+                              li   Server-side libraries
+                            li   Database
+
                     .panel.panel-success
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse')
-                            | 2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
-                      #accordion3_2.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
+                            | Architecture
+                      #accordion3_2.panel-collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | KiboSupport application uses purchased droplet from digitalocean (https://www.digitalocean.com/) for deployment. Our mongodb database is running in same droplet as of our application. For sending emails, we have integrated our application with sendgrid service.
+                          p
+                            | This application is loosely linked with CloudKibo to do conference call between visitor and agent. When agent picks the visitor call, the cloudkibo conference url is generated for both of them. They are redirected to that url for conference.
+                          p
+                            | Currently, our deployments are manual. We push the code to github and then access our droplet by ssh and pull the latest code there. With docker, we would just make a code push and docker will make build image for us.
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse')
-                            | 3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ?
-                      #accordion3_3.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_3', data-parent='#accordion3', data-toggle='collapse',aria-expanded='true')
+                            | Server side code
+                      #accordion3_3.panel-collapse
                         .panel-body
-                          | Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch   et.
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | Most of the main server side code is written in api folder. The purpose of REST API folder is defined in above section Later, we define authentication strategies in auth folder. We do local, facebook, google and windows based authentications. In configuration, we define several configurations for development environment, production environment and test environment. All the database connections strings are defined here. In socketio.js, we have all the server side code of socket.io. This code is often visited. App.js is the main file of server side application and serves as starting point of our code. ViewRoutes has controllers for all the views requested by client. Routes has all the API route handlers and other 404 route handlers
+                          h4 KiboSupport Server Side Files and Folders Structure
+                          p
+                            | KiboSupport server side files and folders are categorized for clarification and understanding. Each link makes a URI and the complete URI can be seen as:
+                          code api.kibosupport.com/[folder-name]/[link-of-File]
+                          p For example we have folder API and the link
+                          code //agentinitiatecalls/myschedullecalls
+                          p ,the complete URI will be
+                          code api.kibosupport.com//api/agentinitiatecalls/myschedullecalls/
+                          p
+                            | Following shows the complete server side folder and file. And each file has a description of the code it contains.
+                          h4 API (Folder)
+                          h5 Agentinitiatedcalls
+                          code agentinitiatedcalls/agentiniitedcalls.controller.js
+                          p File Description: Route Handlers for agent initiated calls List
+                          p File Category: Route Handlers
+                          code agentinitiatedcalls/agentiniitedcalls.model.js
+                          p File Description: Code for MongoDB Collection for agent initiated calls List
+                          p File Category: MongoDB model
+                          p Complete KiboSupport Server side structure can be found here:
+                          code https://github.com/Cloudkibo/KiboSupport/wiki/KiboSupport-Server-Side-code
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse')
-                            | 4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ?
-                      #accordion3_4.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_4', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
+                            | Client side code
+                      #accordion3_4.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          p
+                            | On client side, we are using angularjs so most of the client application follows the angularjs patter of modularity. We have dependencies which are injected into each other when required. We have defined controllers, services, directives and filters.
+                          p
+                            | KiboSupport is single-page-application therefore we often request views from the server according to route. Client side routes are handled separately by angularjs and server side routes are not exposed to normal user. All the authentication and password management logic can be found in /app/account folder. Super user code on client side is defined in the /app/admin folder Most of the services are defined in the services folder. We have defined controllers which are not independent of views in controllers folder. We also have separate folders for filters and directives.
+                          p
+                            | Bower_components folder is automatically created and managed by bower. We don’t need to do anything with this folder.
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse')
-                            | 5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ?
-                      #accordion3_5.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_5', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
+                            | Integration
+                      #accordion3_5.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p
+                            | It only require us to run npm install and bower install commands and this install all libraries. All the server side libraries are defined in package.json file. All the client side libraries are defined in bower.json. Sendgrid api is accessed using nodejs library and it has username and password which can be changed from super user account. Super user has all right to change the configuration.
+                          p
+                            | Application is integrated with shippable which automatically runs all the tests on each github commit and sends the email on test failure. Shippable uses the grunt file to run the tests. All the automated processes run by shippable are defined in grunt file.
+                          p
+                            | To see how they have been integrated follow the link: (Link)
+
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse')
-                            | 6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ?
-                      #accordion3_6.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_6', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
+                            | Libraries
+                      #accordion3_6.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p Server side libraries:
+                            ul
+                              li socket.io
+                              li passport
+                              li sendgrid
+                            p Client side libraries:
+                            ul
+                              li angular bootstrap
+                              li angular socket io client
+                              li ocLazyLoad
+                              li angular web notification
+                              li angular google chart
+                              li angular high chart
+                              li angular css
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse')
-                            | 7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ?
-                      #accordion3_7.panel-collapse.collapse
+                          a.accordion-toggle(href='#accordion3_7', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
+                            | Database
+                      #accordion3_7.panel-collapse
                         .panel-body
-                          | 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+                          p
+                            | Kibosupport uses mongoose library of nodejs to connect to our mongodb database. In operations guide, we have described how to setup mongodb database for KiboSupport. Here we would look how tables (collectionds) are defined in code. In mongodb, we don't defined ER diagrams for tables. In code, we defined structure of tables and they are automatically created when first time used.
+                          p
+                            | All of our tables on server side are in API folder. For each entity we have a table, e.g. we have "users" table. Now, any file whicn ends in '.model.js' is the file which describes the structure and constraints of any table. You would find these files in api folder on server side code.
+                          p Here is the sample of a table defined in userchats.model.js file.
+                          code
+                            p var userchat = new Schema({
+                            p      to : String,
+                            p      from : String,
+                            p      fromFullName : String,
+                            p      msg : String,
+                            p      date : {type: Date, default: Date.now },
+                            p      owneruser : String
+                            | });
+                            p module.exports = mongoose.model('userchat', userchat);
+                          p All the tables will be defined in same way in their respective files.
                 // END TAB 3
+                // START TAB 4
+                #tab_4.tab-pane
+                  #accordion4.panel-group
+                    .panel.panel-danger
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Overview
+                      #accordion4_1.panel-collapse
+                        .panel-body
+                          p
+                            | It only require us to run npm install and bower install commands, this install all libraries. Sendgrid api is accessed using nodejs library and KiboSupport has username and password for sendgrid which can be changed from super user account.
+                          p Owner has all right to change the configuration.
+                          p
+                            | Application is integrated with shippable which automatically runs all the tests on each github commit and sends the email on test failure. Shippable uses the grunt file to run the tests and all the automated processes run by shippable are defined in grunt file.
+                    .panel.panel-success
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Implementing and Integrating TURN server
+                      #accordion4_2.panel-collapse
+                        .panel-body
+                          p We would install the rfc5766-turn-server, an open-source project, on Ubuntu
+                            h5 Step 1: Install the dependencies
+                            p
+                              code sudo apt-get install libssl-dev
+                            p
+                              code sudo apt-get install libevent-dev
+                            h5 Step 2: Download the tar file and untar it
+                            code
+                              | wget http://turnserver.open-sys.org/downloads/v3.2.5.9/turnserver-3.2.5.9-debian-wheezy-ubuntu-mint-x86-64bits.tar.gz
+                            p
+                              | You can download the latest version by going to the downloads section in this link:
+                              code https://code.google.com/p/rfc5766-turn-server
+                            code tar xfz turnserver-3.2.5.9-debian-wheezy-ubuntu-mint-x86-64bits.tar.gz
+                            p
+                              | You would get
+                              code *.deb
+                              | file and INSTALL file.
+                            h5 Step 3: Installation
+                            code sudo apt-get update
+                            code sudo apt-get install gdebi-core
+                            p
+                              | If you get unmet dependency error on above command then run the following command before running this command.
+                            code sudo apt-get -f install
+                            p
+                              | Next, we would use gdebi with
+                              code  *.deb file.
+                            code sudo gdebi rfc5766*.deb
+                            p
+                              | It will install the TURN on your file system. It would put documentations, binaries and configuration files in different directories. You would like to read some documentation in /usr/share/doc/rfc5766-turn-server directory. Also check following manuals.
+                            code
+                              p man turnserver
+                              p man turnadmin
+                              p man turnutils
+                            h5 Step 4: Configuration
+                            p
+                              | Edit this file /etc/turnserver.conf. Leave everything as it is and write the following statement in it. listening-ip= We would use the long term credentials. For this, you need to edit this file /etc/turnuserdb.conf.
+                            p Insert the following statement in this file.
+                            code username:password
+                            p
+                              | Now, in order to run turn server as a daemon, edit this file /etc/default/rfc5766-turn-server and make sure following is set to 1.
+                            code TURNSERVER_ENABLED=1
+                            h5 Step 5: Start the server
+                            p Go to this directory /usr/bin and run the following command to start the server.
+                            code turnserver -o -a -r -f
+                            p Now, open it up.
+
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Sendgrid Integration
+                      #accordion4_3.panel-collapse
+                        .panel-body
+                          p
+                            | Sendgrid is an email service provider api which CloudKibo uses to send automatic emails to users. In package.json file, we have defined which version of sendgrid api we integrate with our server. Simple npm install command would work and install this module along with all other required modules. The username and password is given to us by Sendgrid which is provided when we use this API. We have stored the username and password in database so that super user can easily modify them according to need:
+
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Integration with Facebook, Google and Windows
+                      #accordion4_4.panel-collapse
+                        .panel-body
+                          p
+                            | CloudKibo is integrated with Facebook, Google and Windows for authentication purposes. All the secrets and keys are defined in database so that they can be easily changed by super user.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Mongodb Integration
+                      #accordion4_5.panel-collapse
+                        .panel-body
+                          p
+                            | Assuming that mongodb has been installed using steps provided in above section, we would need to create database now. Use the following command in mongo console to create database named cloudkibo:
+                          p
+                            code use cloudkibo
+                          p
+                            | Use the following steps to create username and password for that database and run mongo server in authentication mode:
+                          code (http://docs.mongodb.org/manual/tutorial/enable-authentication-without-bypass/)
+                          h5 Procedure
+                          strong Start the MongoDB instance without authentication.
+                          p
+                            | Start the mongod or mongos instance without the authorization or keyFile setting. For example:
+                          code mongod --port 27017 --dbpath /data/db1
+                          p
+                            | For details on starting a mongod or mongos, see Manage mongod Processes or Deploy a Sharded Cluster.
+                          strong Create the system user administrator.
+                          p
+                            | Add the user with the userAdminAnyDatabase role, and only that role. The following example creates the user siteUserAdmin user on the cloudkibo database:
+                          code
+                            p use cloudkibo
+                            p db.createUser(
+                            p   {
+                            p user: "siteUserAdmin",
+                            p pwd: "password",
+                            p roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+                            p }
+                            p )
+                          h5 Re-start the MongoDB instance with authentication enabled.
+                          p
+                            | Re-start the mongod or mongos instance with the authorization or keyFile setting. Use authorization on a standalone instance. Use keyFile on an instance in a replica set or sharded cluster. The following example enables authentication on a standalone mongod using the authorization command-line option:
+                          code mongod --auth --config /etc/mongodb/mongodb.conf
+                          h5 Create additional users.
+                          p
+                            | Log in with the user administrator’s credentials and create additional users. See Manage User and Roles.
+
+                // END TAB 4
+
+        // END CONTENT
       // END CONTENT
 footer
