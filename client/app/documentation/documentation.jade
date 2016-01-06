@@ -51,13 +51,80 @@ navbar
                       #accordion1_1.panel-collapse
                         .panel-body
                           p
-                            | KiboSupport is customer support system that uses next generation technology to connect with you customer instantly with Audio call, Screen sharing and live chat features.
+                            | KiboSupport is customer support system that uses next generation technology to connect you with your customer instantly in an audio / video call with features such as screen sharing, live chat and file transferring.
                           p
-                            | Kibosupport provide real-time support to your customers and proactively initiate chats with visitors on your website. With tools like shortcuts and agent-to-agent chat, collaborating on multiple chat conversations is a breeze for your support agents.
+                            | Kibosupport provides real-time support to your customers and proactively initiate chats with visitors on your website. Just put our widget on your web site. With tools like shortcuts and agent-to-agent chat, collaborating on multiple chat conversations is a breeze for your support agents.
                           p
-                            | KiboSupport provides a view on the agent dashboard that showcases the most relevant call statistics in the different call lists, when the agent first logs into Kibosupport. The view consists of waiting call list, inprogress calls list, abandoned calls list and completed calls list. These call lists include the calls that are new and open and assigned to particular agents' groups.
+                            | KiboSupport provides a view on the agent dashboard that showcases the most relevant call statistics in the different lists. The view consists of waiting call list, in-progress calls list, abandoned calls list and completed calls list. The calls are shown to the agents of particular groups to which they were intended. You can define groups such as Sales, Technical Query, etc.
                           p
-                            | The help visitor button eliminates cherry-picking of calls and improves agent productivity. Calls of one group are shared to available agents within a specific group(s).
+                            | The help visitor button eliminates cherry-picking of calls and improves agent productivity. Calls of one group are shown to available agents within a specific group.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | User Roles
+                      #accordion1_2.panel-collapse
+                        .panel-body
+                          p
+                            | A company team can have following three roles.
+                          p
+                            ul
+                              li Admin
+                              li Supervisor
+                              li Agent
+                          p
+                            | Admin role is highest role in heirarchy and is given by default to the account who first creates company account with KiboSupport. Later, this account can invite other users to the company and assign them roles.
+                          p
+                            | Supervisor has the power to manage the groups he belongs to. If allowed by the admin, supervisor can also include and exlude agents from the groups. They are next to admin in heirarchy and can be removed by an admin.
+                          p
+                            | Agent has no power as such and can only pick customer calls in his/her groups. They can be assigned to more than one group by admin or supervisor.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Groups
+                      #accordion1_2.panel-collapse
+                        .panel-body
+                          p
+                            | You can divide your agents into several groups / teams according to your business requirement.
+                          p
+                            | Groups can have agents and supervisors. Supervisors have the power to add and remove the agents from their groups.
+                          p
+                            | Agents can only pick calls in the groups they belong to. If there are no groups in a company then all waiting calls are shown to all the agents.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Widget
+                      #accordion1_2.panel-collapse
+                        .panel-body
+                          p
+                            | Widget is result of a piece of code that you have to put on your website. It would be shown to yours visitors and by clicking on it visitors would be connected to your agent for support call.
+                          p
+                            | Agents would be waiting on the dashboard for incoming visitor call requests (tickets). Visitor would be asked to fill a form first asking for basic information and query.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Reports
+                      #accordion1_2.panel-collapse
+                        .panel-body
+                          p
+                            | Reports help you get insights on how best your agents are performing, which groups receive frequent visitor calls, which web pages are the ones where visitor often need help.
+                          p
+                            | Reports can time span can be changed by just a click of mouse.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion1_2', data-parent='#accordion1', data-toggle='collapse', aria-expanded='true')
+                            | Company Settings
+                      #accordion1_2.panel-collapse
+                        .panel-body
+                          p
+                            | Admin can change the company settings which would apply to all the agents and supervisors.
+                          p
+                            | KiboSupport provides good amount of configurations for a company in this section. You can set sample emails that would be sent to visitors.
+
 
                 // END TAB 1
 
@@ -68,15 +135,31 @@ navbar
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion2_1', data-parent='#accordion2', data-toggle='collapse', aria-expanded='true')
-                            | Accounts and Dashboard
+                            | Accounts
                       #accordion2_1.panel-collapse
                         .panel-body
                           p
-                            | When you login with you kibosupport account the first thing visible is dashboard is berif summary of visitors call statistics with the average wait time and average call duration of visitor calls.
-                            | These waiting calls, inprogress calls, abandoned calls and complete calls are clickable. On click they show detailed view of each call and visitor. The details also shows which agent has picked the call. The side panel gives direct link to other Kibosupport features and call details.
-                          h3 Company Settings
+                            | There is only one account created with creation of a company that is admin account. Admin account itself is company account at first, however, company is created as a separate entity then.
                           p
-                            | On login with Kibosupport account you need to set company settings. These settings include some configuration settings for agents , groups and calls.
+                            | When creating a company, one just needs to go to registration page and fill the given form. After this logging in each time would take us to the company dashboard.
+                          p
+                            | Admin can then invite the users to the company. Invited users would receive a link in an email from KiboSupport. On clicking the link, they would be taken to the Join Company form, where they would be required to fill in their basic information.
+                          p
+                            | On joining, all the invited users would be given role of agent. Admin can later change their roles according to need and assign them to different groups.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion2_2', data-parent='#accordion2', data-toggle='collapse', aria-expanded='true')
+                            | Dashboard
+                      #accordion2_2.panel-collapse
+                        .panel-body
+                          p
+                            | Dashboard is the first page where you land after signing in or making account.
+                          p
+                            | Here we give all the statistics of current and completed calls, agent performance and website visitors. It is a nice place to see frequently updating data showing the performance of your agents.
+                          p
+                            | This would be enhanced to include profiles of each team members as a summary.
+
 
                 // END TAB 2
 
@@ -90,14 +173,11 @@ navbar
                             | Agents
                       #accordion3_1.panel-collapse
                         .panel-body
-                          | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
-                          h3  Agent
                           p
                             | Agent list can be seen by admin and supervisor. Admin and supervisor can invite the agent using the email id. Invite link will be given to the agent via email, Kibosupport already has some information about the agent as given by admin or supervisor while sending invitation. When agent is invited it is shown as pending in the agent list until agent signs up. Pending requests for agent can aslo be deleted. Admin and supervisor can view agent and also Admin can change role of agent to
                             ul
                               li Admin
                               li Supervisor
-                          | Customer can just fill a form and join agent in the call.
 
                 // END TAB 3
 
@@ -108,17 +188,13 @@ navbar
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion4_1', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
-                            | Agents
+                            | Groups
                       #accordion4_1.panel-collapse
                         .panel-body
-                          | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
-                          h3  Agent
                           p
-                            | Agent list can be seen by admin and supervisor. Admin and supervisor can invite the agent using the email id. Invite link will be given to the agent via email, Kibosupport already has some information about the agent as given by admin or supervisor while sending invitation. When agent is invited it is shown as pending in the agent list until agent signs up. Pending requests for agent can aslo be deleted. Admin and supervisor can view agent and also Admin can change role of agent to
-                            ul
-                              li Admin
-                              li Supervisor
-                          | Customer can just fill a form and join agent in the call.
+                            | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
+                          p
+                            | Visitor can just fill a form and select the appropriate group i.e. Sales, Technical Guidance, Discounts and benefits.
 
                 // END TAB 4
 
@@ -132,7 +208,6 @@ navbar
                             | Customer Calls
                       #accordion5_1.panel-collapse
                         .panel-body
-                          h3 Audio/Video call
                           p
                             | Live call with your customer helps to have live conversation with your customer and understand their problems and solve them. Customer can just fill a form and join agent in the call.
                           h3 Live chat
@@ -218,7 +293,8 @@ navbar
                             | Reports
                       #accordion8_1.panel-collapse
                         .panel-body
-                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
+                          p
+                            | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
                           h4 Widget UI for visitor
                           p
                             | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
