@@ -159,6 +159,8 @@ navbar
                             | Here we give all the statistics of current and completed calls, agent performance and website visitors. It is a nice place to see frequently updating data showing the performance of your agents.
                           p
                             | This would be enhanced to include profiles of each team members as a summary.
+                          p
+                            img(src='/assets/images/Selection_006.png', alt='')
 
 
                 // END TAB 2
@@ -178,6 +180,19 @@ navbar
                             ul
                               li Admin
                               li Supervisor
+                          p
+                            img(src='/assets/images/Selection_018.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion3_2', data-parent='#accordion3', data-toggle='collapse', aria-expanded='true')
+                            | Iviting Agents
+                      #accordion3_2.panel-collapse
+                        .panel-body
+                          p
+                            | Admin has the right to invite agents to the company who would receive the invitation email by KiboSupport with a joining link. The invited agents show up in the list of agents with name as Pending. Admin can delete the invite anytime or re-invite them.
+                          p
+                            img(src='/assets/images/Selection_007.png', alt='')
 
                 // END TAB 3
 
@@ -192,9 +207,53 @@ navbar
                       #accordion4_1.panel-collapse
                         .panel-body
                           p
-                            | Company can create group so that agent can be categoried according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
+                            | Company can create group so that agent can be categorized according to their relevent area. To create group simple name the group and give description. To activate the group you need to assign an agent to the group to make it operative. List of groups can be seen also each group can be viewed and deleted. Compnay admin can give the right to supervisor to edit the group and agent can only view the group. further roles of Admin, Supervisor and Agent can be seen here
                           p
                             | Visitor can just fill a form and select the appropriate group i.e. Sales, Technical Guidance, Discounts and benefits.
+                          p
+                            img(src='/assets/images/Selection_009.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_2', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Creating Groups
+                      #accordion4_2.panel-collapse
+                        .panel-body
+                          p
+                            | Admin can simply create a new group by pressing Create New Group button. It would ask the name and description for the new group. Upon successful creation of the group, it would start appearing in the groups list. Admin cannot create more groups than the limit set in the company settings. This limit cannot exceed the limit set by KiboSupport system.
+                          p
+                            img(src='/assets/images/Selection_008.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_3', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Viewing Groups
+                      #accordion4_3.panel-collapse
+                        .panel-body
+                          p
+                            | By clicking view button on any group row, we can view the details of that group.
+                          p
+                            img(src='/assets/images/Selection_010.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_4', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Editing Groups
+                      #accordion4_4.panel-collapse
+                        .panel-body
+                          p
+                            | By clicking edit button on any group row, we can edit the details of that group. We can include and exclude agents from the group. Admin can also give rights to supervisor to include or exclude agents from the groups.
+                          p
+                            img(src='/assets/images/Selection_011.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion4_5', data-parent='#accordion4', data-toggle='collapse', aria-expanded='true')
+                            | Deleting Groups
+                      #accordion4_5.panel-collapse
+                        .panel-body
+                          p
+                            | Groups are never hard deleted from the system as it would affect the data of reports. When the group is deleted, its name is changed to "Deleted group_name" so that it is visible in reports that this group used to be in company.
 
                 // END TAB 4
 
@@ -209,19 +268,87 @@ navbar
                       #accordion5_1.panel-collapse
                         .panel-body
                           p
-                            | Live call with your customer helps to have live conversation with your customer and understand their problems and solve them. Customer can just fill a form and join agent in the call.
-                          h3 Live chat
+                            | These are actually tickets or call requests made by visitors on your website by clicking our Live Help widget button. They are divided in four categories according to their status:
+                            ul
+                              li Waiting Calls
+                              li In-Progress Calls
+                              li Abandoned Calls
+                              li Completed Calls
                           p
-                            | Instant chat feature allows your visitors to initiate a chat and communicate with your agents.
-                          h3 Screen sharing
+                            | Agent can pick the waiting calls and mark the in-progress calls completed (if started by same agent). Moreover, we give the option to agent to reschedule an abandoned (missed) call of any visitor from within the application. Agent can also reschedule calls for previous successful tickets.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion5_2', data-parent='#accordion5', data-toggle='collapse', aria-expanded='true')
+                            | Waiting Calls
+                      #accordion5_2.panel-collapse
+                        .panel-body
                           p
-                            | Screen sharing feature helps you to direct your visitor directly to the answer they've been looking for, instead of trying to explain where to find the answer.
-                          h3 Reports
+                            | When the visitor fills the widget, the call is shown on this tab to the agents to pick. All the waiting calls are shown in order of "First Come, First Serve" i.e. the first visitor would be shown on top.
                           p
-                            | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
-                          h3 Widget on website
+                            | We capture the following additional information of visitor for agent:
+                            ul
+                              li Location
+                              li IP Address
+                              li Current Web Page
+                              li Device Information
                           p
-                            | Each company has its own unique identity. Easy way to embed widget code and connect with you customer
+                            | On picking the call, both agent and visitor are directed to a conference room where they can start audio chat with text messaging, file transferring and screen sharing features. Admin can set chat only sessoin between agent and visitor from the company settings.
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion5_3', data-parent='#accordion5', data-toggle='collapse', aria-expanded='true')
+                            | In-Progress Calls
+                      #accordion5_3.panel-collapse
+                        .panel-body
+                          p
+                            | When the agent picks the call, that call is moved to the In-Progress Calls list. It shows the progressing call duration time with name of agent who picked the call. It is the responsibility of an agent to close (mark complete) the call s/he started.
+                          p
+                            img(src='/assets/images/Selection_019.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion5_4', data-parent='#accordion5', data-toggle='collapse', aria-expanded='true')
+                            | Abandoned Calls
+                      #accordion5_4.panel-collapse
+                        .panel-body
+                          p
+                            | These are the calls which were missed by agents. Calls can be missed by the agents in two ways:
+                            ul
+                              li Visitor waited for his/her call to be picked by agent and finally left the widget
+                              li Visitor came on the widget but no agent was online at that time
+                          p
+                            | We capture the following additional information of visitor for agent:
+                            ul
+                              li Name
+                              li Email address
+                              li Query
+                              li Phone Number (optional)
+                              li Group (if company has groups)
+                              li Location
+                              li IP Address
+                              li Current Web Page
+                              li Device Information
+                          p
+                            | Agent has the right to reschedule call for any abandoned visitor. Just press the Reschedule button on row of each visitor entry. It would show 3 sample emails to choose from. One of the email would be sent to visitor for invitation to the call. Agent can change these email contents and save them for later use. Agent has the option to just schedule the call but don't send the email using KiboSupport.
+                          p
+                            img(src='/assets/images/Selection_021.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion5_5', data-parent='#accordion5', data-toggle='collapse', aria-expanded='true')
+                            | Completed Calls
+                      #accordion5_5.panel-collapse
+                        .panel-body
+                          p
+                            | When the agent completes the call, that call is moved to the Completed Calls list. It shows the compelete call duration with name of agent who resolved the call. It is the responsibility of an agent to close (mark complete) the call s/he started.
+                          p
+                            img(src='/assets/images/Selection_020.png', alt='')
+                          p
+                            | Agent has the option to write summary about the completed call to give description of nature of problem and more information about visitor observed during the call.
+                          p
+                            | Agent can also reschedule the completed call in case there is something more to discuss with the same visitor.
+
 
                 // END TAB 5
 
@@ -232,25 +359,13 @@ navbar
                       .panel-heading
                         h4.panel-title
                           a.accordion-toggle(href='#accordion6_1', data-parent='#accordion6', data-toggle='collapse', aria-expanded='true')
-                            | Inviting Customers
+                            | Inviting Customer
                       #accordion6_1.panel-collapse
                         .panel-body
-                          |  This document ill inform you about how can you use the functionality provided by Kibosupport
-                          h4 Sign up
                           p
-                            | You can signup your compnay with Kibosupport with your email id.
-                          h4 As company owner
+                            | Agent has the option to invite any new customer to support call if he/she knows email address of the customer. Customer would get the email from KiboSupport regarding invitiation to the support call. Customer would be given a URL to join the call. When customer joins the call, he would be shown into Waiting Calls list.
                           p
-                            | Company can sign up with company name and company domain name. The domain name will help admin of company to invite agent that have company domain email id.
-                          h4 As company agent
-                          p
-                            | Admin can invite an agent to join its company and provide service to customers. Agent will be given invite link via email, agent's email id is already caputred and set by company admin. Agen can login using company domain emaild id ONLY, as set by company admin.
-                          h4 Login
-                          p
-                            | Login with Kibosupport using registered email id and password.
-                          h4 Reset password
-                          p
-                            | You can always reset your password by provding your registered Kibosupport email id. A rest email with password Reset Link will been sent to your email address. Check your spam or junk folder if you have not received the email.
+                            img(src='/assets/images/Selection_012.png', alt='')
 
                 // END TAB 6
 
@@ -264,22 +379,22 @@ navbar
                             | Widget
                       #accordion7_1.panel-collapse
                         .panel-body
-                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
-                          h4 Widget UI for visitor
+                          p
+                            | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
+                          p
+                            img(src='/assets/images/Selection_013.png', alt='')
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a.accordion-toggle(href='#accordion7_2', data-parent='#accordion7', data-toggle='collapse', aria-expanded='true')
+                            | Widget form shown to visitor
+                      #accordion7_2.panel-collapse
+                        .panel-body
                           p
                             | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
-                          h4 Report
                           p
-                            |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
-                          h4 Top Group calls
-                          p
-                            | This graph shows groups with respect to frequeny of calls made for.
-                          h4 Agents picked calls
-                          p
-                            | This graph represents the agent with respect to number of calls picked by them.
-                          h4 Averages
-                          p
-                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+                            img(src='/assets/images/Selection_026.png', alt='')
+
 
                 // END TAB 7
 
@@ -294,22 +409,11 @@ navbar
                       #accordion8_1.panel-collapse
                         .panel-body
                           p
-                            | Bring focus on work performed by agents and groups, agent response time, call statistic, group traffic to get the insights. Analytics plays a huge role in customer service. Quality reports helps you to stay on target.
-                          h4 Widget UI for visitor
-                          p
-                            | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
-                          h4 Report
-                          p
                             |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
-                          h4 Top Group calls
                           p
-                            | This graph shows groups with respect to frequeny of calls made for.
-                          h4 Agents picked calls
+                            img(src='/assets/images/Selection_024.png', alt='')
                           p
-                            | This graph represents the agent with respect to number of calls picked by them.
-                          h4 Averages
-                          p
-                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+                            img(src='/assets/images/Selection_025.png', alt='')
 
                 // END TAB 8
 
@@ -323,20 +427,31 @@ navbar
                             | Company Settings
                       #accordion9_1.panel-collapse
                         .panel-body
-                          p You can set following settings:
+                          p
+                            | Admin is given the company settings section where admin can set some configurations which would apply all the company members and the way widget works.
+                          p
+                            img(src='/assets/images/Selection_014.png', alt='')
+                          p
+                            | Admin can set the following options:
                             ul
                               li Max number of groups
                               p
-                                | This gives restriction for not creating more than set number of groups.
+                                | This gives restriction for not creating more than defined number of groups. However, this number cannot exceed the limit defined by KiboSupport.
                               li Company domain emails
                               p
                                 | Company domain emails restricts that no agent or supervisor can join or be invited if they do not have company domain email.
                               li Show summary
                               p
                                 | This allows agent, admin and supervisor to record summaray of visitor and show its call summary captured previously.
+                              li Email Notifications
+                              p
+                                | Admin can define if he/she wants to receive email notifications if there is a visitor and no agent is online
                               li Allow chat
                               p
                                 | During the call you can allows chat feature to chat with visitor
+                              li Open widget as either separate tab or separate window
+                              p
+                                | When visitor presses the live help button, the widget is opened as a separate browser popup window. However, mostly browsers block these windows. Admin can set if the widget opens as a separate window or separate tab.
                               li Abandoned call reschedule Sample emails
                               p
                                 | Company admin, supervisor and agent can set three sample emails to schedule any abandoned call.
@@ -359,22 +474,15 @@ navbar
                             | My Profile
                       #accordion10_1.panel-collapse
                         .panel-body
-                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
-                          h4 Widget UI for visitor
                           p
-                            | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
-                          h4 Report
+                            | My profile section is unique to each user. User can change basic profile information, change password, profile picture, change content of sample emails used to invite visitors into call and change other settings.
                           p
-                            |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
-                          h4 Top Group calls
+                            img(src='/assets/images/Selection_015.png', alt='')
                           p
-                            | This graph shows groups with respect to frequeny of calls made for.
-                          h4 Agents picked calls
+                            img(src='/assets/images/Selection_016.png', alt='')
                           p
-                            | This graph represents the agent with respect to number of calls picked by them.
-                          h4 Averages
-                          p
-                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+                            img(src='/assets/images/Selection_017.png', alt='')
+
 
                 // END TAB 10
 
@@ -388,22 +496,10 @@ navbar
                             | My Picked Calls
                       #accordion11_1.panel-collapse
                         .panel-body
-                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
-                          h4 Widget UI for visitor
                           p
-                            | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
-                          h4 Report
+                            | Each agent can see the list of visitor calls he/she has picked. This history is read only for agent.
                           p
-                            |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
-                          h4 Top Group calls
-                          p
-                            | This graph shows groups with respect to frequeny of calls made for.
-                          h4 Agents picked calls
-                          p
-                            | This graph represents the agent with respect to number of calls picked by them.
-                          h4 Averages
-                          p
-                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+                            img(src='/assets/images/Selection_022.png', alt='')
 
                 // END TAB 11
 
@@ -417,22 +513,10 @@ navbar
                             | My Scheduled Calls
                       #accordion12_1.panel-collapse
                         .panel-body
-                          | Widget helps you provide more efficient service to your visitors. You can embed the widget on your website with unique company id provided by Kibosupport. You must have to put a button on your page. The code is described to set widget to your pages.
-                          h4 Widget UI for visitor
                           p
-                            | Visitor can click the widget button and fill the form and ask question from any relevant group. For example: Sales group, Marketing group. And wait for agent to join the call.
-                          h4 Report
+                            | Each agent can see the list of visitor calls he/she has scheduled or invited. This history is read only for agent.
                           p
-                            |  Our Real-Time report gives you an overview of agents' activity. Measure your live call engagement with visitor. These reports can be viewed for Today, Last month and This Year
-                          h4 Top Group calls
-                          p
-                            | This graph shows groups with respect to frequeny of calls made for.
-                          h4 Agents picked calls
-                          p
-                            | This graph represents the agent with respect to number of calls picked by them.
-                          h4 Averages
-                          p
-                            | This graph shows the average of wait time of all calls and average of call time during progress call. This graph shows the number of calls picked and completed with the number of calls abandoned.
+                            img(src='/assets/images/Selection_023.png', alt='')
 
                 // END TAB 12
                 // END TABS

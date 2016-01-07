@@ -42,7 +42,7 @@ module.exports = function(app) {
    * https://github.com/krakenjs/lusca
    */
   if ('test' !== env) {
-    app.use(lusca({
+    /*app.use(lusca({
       csrf: {
         angular: true
       },
@@ -53,7 +53,7 @@ module.exports = function(app) {
         preload: true
       },
       xssProtection: true
-    }));
+    }));*/
   }
 
   app.set('appPath', path.join(config.root, 'client'));
