@@ -9,186 +9,103 @@ navbar
             p  Welcome to the KiboSupport API documentation! Our API provides flexible tools that can be used in the creation of new, outstanding projects.
             p  KiboSupport API returns data in JSON format. 
             ol
-              //
+              
                 li 
                   b USERS (ADMIN, SUPERVISORS AND AGENTS)
                   ol
                              li 
-                                span LIST ALL AGENTS
+                                b LIST ALL AGENTS
                                 p Returns all KiboSupport agents list of a particular company.
                                 span https://api.kibosupport.com/api/users/allagents
                                 p HTTP Method: GET
                                 p Response : Response consists of two JSON arrays: agents and departments. Departments array contains array items of department names and each of this array item is for corresponding agent item in agents array
                              li 
-                                span GET USER PROFILE
+                                b GET USER PROFILE
                                 p Use this integration to get the profile of the authenticated user.
                                 span https://api.kibosupport.com/api/users/me
                                 p    HTTP Method: GET
                              li 
-                               span UPDATE PROFILE OF THE USER
-                               span Use this integration to update the profile of the user.
+                               b UPDATE PROFILE OF THE USER
+                               p Use this integration to update the profile of the user.
                                span https://api.kibosupport.com/api/users/updateprofile
                                p    HTTP Method: POST
                                p    Parameters : firstname,lastname,phone,city,state,country
                                p    Response : { status: 'success',	msg: {<< Modified User Profile >>}}
 
-
-                             li
-                              span /api/users/:id/password Changes user's password
-                              p   HTTP Method: PUT
-                             li
-                              span /api/users/:id Get single user
-                              p    HTTP Method: GET
-                             li
-                              span  /api/users/ Create new user
-                              p     HTTP Method: POST
-                              p     Parameters: firstname, lastname, email, phone, username, password,
-                             li
-                              span /api/users/userimage/update Update user image
-                              p    HTTP Method: POST
-                             li  
-                              span   /api/users/userimage/:image Get user image
-                               p     HTTP Method: GET
-                             li
-                              span  /api/users/update Change user profile
-                              p     HTTP Method: PUT
-                             li
-                              span  /api/users/searchbyusername Search by user name
-                              p     HTTP Method: POST
-                              p     Parameters: searchusername
-                             li
-                              span /api/users/searchbyuseremail Search by user email
-                              p    HTTP Method: POST
-                              p    Parameters: searchemail
-                             li
-                              span /api/users/invitebyemail Invite by email
-                              p    HTTP Method: POST
-                              p    Parameters: recipientEmail, shortmessage
-                             li
-                              span /api/users/initialtestingdone Initial testing of webcam and webRTC support is done here
-                              p    HTTP Method: POST
-                              p    Parameters: initialTesting
-                             li
-                              span /api/users/setstatusmessage Sets the status message of user
-                              p    HTTP Method: POST
-                              p    Parameters: status
-                             li
-                              span  /api/users/resetpasswordrequest Password reset route
-                              p     HTTP Method: POST
-                              p    Parameters: email
-                             li
-                              span /api/users/changepassword When user gives new password
-                              p    HTTP Method: POST
-                              p    Parameters: password
-                             li
-                              span /api/users/saveusername Save username, email and phone number for Federated authenticated user
-                              p    HTTP Method: POST
-                              p    Parameters: username, email, phone
                 li
-                 b Contact
+                 b Visitor Calls
                  ol
                     li
-                       span /api/contactslist/ Gives lists of users
+                       b GET ALL VISITOR CALLS INFORMATION OF A COMPANY
+                       p Use this integration to get the list of all the visitor calls of a company.
+                       span https://api.kibosupport.com/api/visitorcalls/
                        p    HTTP Method: GET
                     li
-                       span /api/contactslist/pendingcontacts Add contact with cloudkibo username
+                       b GET ALL VISITOR WAITING CALLS INFORMATION OF A COMPANY
+                       p Use this integration to get the list of all the visitor waiting calls of a company.
+                       span https://api.kibosupport.com/api/visitorcalls/waitingcalls
                        p    HTTP Method: GET
                     li
-                       span /api/contactslist/addbyusername Add contact with email address
-                       p    HTTP Method: POST
-                       p    Parameters: username
-                    li
-                       span /api/contactslist/addbyemail Accepts the contact add request
-                       p    HTTP Method: POST
-                       p    Parameters: useremail
-                    li
-                       span /api/contactslist/approvefriendrequest Reject the contact add request
-                       p    HTTP Method: POST
-                       p    Parameters: index
-                    li
-                       span /api/contactslist/rejectfriendrequest Remove contact from contact list
-                       p    HTTP Method: POST
-                       p    Parameters: index
-                    li
-                       span /api/contactslist/removefriend removes friend from the contact list
-                       p    HTTP Method: POST
-                       p    Parameters: firstname, lastname, status, username
-                li
-                  b User Chat
-                  ol
-                    li
-                      span  /api/userchat/ Bring users chat
-                      p     HTTP Method: POST
-                      p     Parameters: username1, username2
-                    li
-                      span  /api/userchat/save Saves contact chat
-                      p     HTTP Method: POST
-                      p     Parameters: to, from, fromFullName, msg, owneruser
-                    li
-                      span  /api/userchat/markasread marks chat as read
-                      p     HTTP Method: POST
-                      p     Parameters: user1_id, user2_id
-                    li
-                      span  /api/userchat/removechathistory Removes chat history of the contact
-                      p  HTTP Method: POST
-                      p  Parameters: username
-                li
-                  b Auth
-                  ol
-                    li
-                     span /auth/local/ local authentication
-                     p    HTTP Method: POST
-                     p    Parameters: username, password
+                       b GET ALL VISITOR IN-PROGRESS CALLS INFORMATION OF A COMPANY
+                       p Use this integration to get the list of all the visitor in-progress calls of a company.
+                       span https://api.kibosupport.com/api/visitorcalls/progresscalls
+                       p    HTTP Method: GET
 
                     li
-                     span /auth/facebook/ Facebook authentication
-                     p    HTTP Method: GET
+                       b GET ALL VISITOR ABANDONED CALLS INFORMATION OF A COMPANY
+                       p Use this integration to get the list of all the visitor abandoned calls (not picked or missed calls) of a company.
+                       span https://api.kibosupport.com/api/visitorcalls/abandonedcalls
+                       p    HTTP Method: GET
+
                     li
-                     span /auth/windowslive/ Microsoft authentication
-                     p    HTTP Method: GET
-                    li
-                     span  /auth/google/ Google authentication
-                     p     HTTP Method: GET
-                
-              li
-                  b Meeting Chat
+                       b GET ALL COMPLETED CALLS INFORMATION OF A COMPANY
+                       p Use this integration to get the list of all the visitor completed calls of a company.
+                       span https://api.kibosupport.com/api/visitorcalls/completedcalls
+                       p    HTTP Method: GET
+                       
+                li
+                  b COMPANY PROFILE
                   ol
                     li
-                      span
-                           b GET LIST OF ALL CHAT IN ALL MEETING SESSIONS
-                      p    Use this integration to get the list of all chat in all meeting sessions of a company
-                      p    Path : https://api.cloudkibo.com/api/meetingchat/ 
-                      p    HTTP Method: POST
-                      p    Parameters : companyid
-                     
+                       b GET PROFILE OF A COMPANY
+                       p Use this integration to get the profile of a company of authenticated admin.
+                       span https://api.kibosupport.com/api/companyprofiles/fetch
+                       p    HTTP Method: GET
+                li
+                  b GROUPS (DEPARTMENTS)
+                  ol
                     li
-                      span
-                           b GET LIST OF ALL CHAT IN SPECIFIC MEETING SESSION
-                      p    Use this integration to get all chat done in specific meeting session of a company
-                      p    Path : https://api.cloudkibo.com/api/meetingchat/specific_conference
-                      p    HTTP Method: POST
-                      p    Parameters : companyid,request_id 
+                       b GET ALL GROUPS OF A COMPANY
+                       p Use this integration to get the list of groups in a company of authenticated admin.
+                       span https://api.kibosupport.com/api/departments/
+                       p    HTTP Method: GET
+
+                    li
+                       b GET DETAILS OF GROUP OF A COMPANY
+                       p Use this integration to get the details of group in a company.
+                       span https://api.kibosupport.com/api/departments/:id
+                       p    HTTP Method: GET
+                       p Required Parameters:id	(department id in URL parameter)
+                
+                li
+                  b Call Statistics
+                  ol
+                    li
+                      b GET Department wise Call Statistics
+                      p    Use this integration to get the call statistics department wise.
+                      p    Path : https://api.kibosupport.com/api/visitorcalls/deptcallstats
+                      p    HTTP Method: GET
                     
                     li
-                      span
-                           b GENERATE THE MEETING URL
-                      p    Use this integration to get conference session URL
-                      p    Path : https://api.cloudkibo.com/api/meetingchat/generate_url
-                      p    HTTP Method: POST
-                      p    Parameters : companyid,request_id,agentname,visitorname,agentemail,visitoremail
-                      p    Response   : {url_agent : meetingurl, url_customer : meetingurl}
-              
-              
-              li
-                  b Company Account
-                  ol
+                      b GET Agent wise Call Statistics
+                      p    Use this integration to get call statistics agent wise
+                      p    Path : https://api.kibosupport.com/api/visitorcalls/agentcallstats
+                      p    HTTP Method: GET
+                    
                     li
-                      span
-                           b UPDATE THE WEBHOOK URL
-                      p    Use this integration to update the webhook URL of the company's server
-                      p    Path :  https://api.cloudkibo.com/api/companyaccounts/webhook 
-                      p    HTTP Method: POST
-                      p    Parameters : webhook
-                      p    Response : {status: 'Updated Webhook URL'}
+                      b GET Date wise Call Statistics
+                      p    Use this integration to get get date wise call statistics.
+                      p    Path : https://api.kibosupport.com/api/visitorcalls/datewisecallstats
+                      p    HTTP Method: GET
                    
 footer

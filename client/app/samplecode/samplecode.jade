@@ -1,0 +1,47 @@
+navbar
+.main
+  .container
+    .col-md-12.col-sm-12
+      .content-page
+          sidebar 
+          div(class="content col-md-9 col-sm-9")
+            h1 Sample Code
+            p  Below code snippet will help you in getting started with services provided by our REST APIs.
+            p  Please note that code is written in NodeJS
+            h2 Define header containing your token
+            pre
+                code
+                         | var  headers =  {
+                         | 'kibo-app-id'    : 'your-app-id',
+                         | 'kibo-app-secret': 'your-app-secret',
+                         | 'kibo-client-id' : 'your-client-id',
+                         | 'content-type'   : 'application/x-www-form-urlencoded'
+                         |     }
+            h2 Call Our REST API through your server
+            ol  
+               li
+                 h3 Get List of Agents from KiboSupport
+                 pre
+                    code
+                         | router.get('/agents', function(req, res, next) {
+                         | var options = {
+                         |    url: 'https://api.kibosupport.com/api/users/allagents',
+                         |     rejectUnauthorized : false,
+                         |     headers:headers
+                         |           };
+                         |  function callback(error, response, body) {
+                         |       if (!error && response.statusCode == 200) {
+                         |               var info = JSON.parse(body);
+                         |               res.render('agents',{mydata:info.agents});
+                         |             }
+                         |         else
+                         |           {
+                         |             data = null;
+                         |             console.log(error);
+                         |           
+                         |           }
+                         |        }
+                         |       request(options, callback);
+                         |       });
+ 
+footer
